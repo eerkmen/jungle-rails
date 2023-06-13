@@ -17,7 +17,9 @@
         </tr>
       </thead>
       <tbody>
-        
+        <% @order.line_items.each do |order_item| %>
+          <%= render 'item', item: order_item, product: Product.find(order_item.product_id) %>
+        <% end %>
       </tbody>
       <tfoot>
        
