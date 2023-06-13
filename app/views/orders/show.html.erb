@@ -20,7 +20,9 @@
         
       </tfoot>
     </table>
-    
+    <p>
+      Order information sent to: <%= @order.email %>
+    </p>
   </div>
 
   <%= link_to "Continue Shopping", root_path, class: 'btn btn-lg btn-primary' %>
