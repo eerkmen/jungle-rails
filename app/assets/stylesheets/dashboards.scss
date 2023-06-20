@@ -15,7 +15,9 @@
     &:hover {
       background-color: rgba(0, 130, 29, 0.7); 
     }
-   
+    .tab:visited {
+      color: rgba(255, 255, 255, 0.747);
+    }
 
     .tab-top {
       text-align: center;
