@@ -18,7 +18,10 @@
         </tr>
       </thead>
       <tbody>
-      
+        <% @categories.each do |category|%>
+          <% category_id = category.id%>
+          <%= render 'category', category: category, amount: Product.where(category_id: category_id).count %>
+        <%end%>
       </tbody>
     </table>
 
