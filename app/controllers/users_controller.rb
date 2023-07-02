@@ -10,6 +10,7 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
+      flash[:error] = "Email already exists." # Set an error flash message
       redirect_to '/signup'
     end
   end
