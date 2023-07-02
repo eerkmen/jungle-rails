@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  has_secure_password
+  
 
   def new
   end
@@ -17,7 +17,7 @@ class UsersController < ApplicationController
   def find_by_email(email)
     return User.where(email: email)
   end
-  
+
   private
 
   def user_params
