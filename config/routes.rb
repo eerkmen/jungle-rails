@@ -21,7 +21,7 @@ Rails.application.routes.draw do
   end
   get '/about', to: 'about#show'
   get '/login' => 'sessions#new'
- 
+  post '/login' => 'sessions#create'
   get '/signup' => 'users#new'
   post '/users' => 'users#create'
   # The priority is based upon order of creation: first created -> highest priority.
