@@ -1,6 +1,4 @@
 class UsersController < ApplicationController
-  
-
   def new
   end
 
@@ -10,13 +8,8 @@ class UsersController < ApplicationController
       session[:user_id] = user.id
       redirect_to '/'
     else
-      flash[:error] = "Email already exists." # Set an error flash message
       redirect_to '/signup'
     end
-  end
-
-  def find_by_email(email)
-    return User.where(email: email)
   end
 
   private
